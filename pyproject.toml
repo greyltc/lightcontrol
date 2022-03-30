@@ -5,7 +5,7 @@ requires = [
 ]
 
 [project]
-name = "livechart"
+name = "lightcontrol"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {file = "LICENSE.txt"}
@@ -25,33 +25,24 @@ classifiers = [
 dynamic = ['version']
 
 dependencies = [
-  "asciichartpy"
-]
-
-[project.optional-dependencies]
-test = [
-  "pytest",
-  "pytest-cov[all]"
+  "gi"
+  "matplotlib"
 ]
 
 [project.urls]
-homepage = "https://github.com/greyltc-org/livechart"
-documentation = "https://github.com/greyltc-org/livechart/blob/master/README.md"
-repository = "https://github.com/greyltc-org/livechart.git"
-changelog = "https://github.com/greyltc-org/livechart/blob/master/CHANGELOG.md"
+homepage = "https://github.com/greyltc/lightcontrol"
+documentation = "https://github.com/greyltc/livechart/blob/master/README.md"
+repository = "https://github.com/greyltc/lightcontrol.git"
+changelog = "https://github.com/greyltc/lightcontrol/blob/master/CHANGELOG.md"
 
 [project.scripts]
-livechart-cli = "livechart.viewers.ncurses:main"
-livechart-srv = "livechart.server:main"
+lightcontrol-srv = "lightcontrol.server:main"
 
 [project.gui-scripts]
-livechart = "livechart.viewers.gtk4:main"
-livechart-gui = "livechart.viewers.gtk4:main"
-livechart-gtk3 = "livechart.viewers.gtk3:main"
-livechart-gtk4 = "livechart.viewers.gtk4:main"
+lightcontrol = "lightcontrol.gtk4:main"
 
 [tool.setuptools.dynamic]
-version = {attr = "livechart.__version__"}
+version = {attr = "lightcontrol.__version__"}
 
 [tool.setuptools.package-data]
 "*" = ["*.ui.xml"]

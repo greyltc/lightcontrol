@@ -36,13 +36,13 @@ class Interface(object):
         except Exception as e:
             pass  # this is not a package
 
-        self.app = Gtk.Application(application_id="org.greyltc.livechart", flags=Gio.ApplicationFlags.FLAGS_NONE)
+        self.app = Gtk.Application(application_id="org.greyltc.lightcontrol", flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.app.connect("activate", self.on_app_activate)
         self.app.connect("shutdown", self.on_app_shutdown)
 
         # setup about dialog
         self.ad = Gtk.AboutDialog.new()
-        self.ad.props.program_name = "livechart"
+        self.ad.props.program_name = "lightcontrol"
         self.ad.props.version = self.version
         self.ad.props.authors = ["Grey Christoforo"]
         self.ad.props.copyright = "(C) 2022 Grey Christoforo"
@@ -73,7 +73,7 @@ class Interface(object):
 
             win.set_application(app)
             win.set_help_overlay(help_overlay)
-            win.props.title = f"livechart {self.version}"
+            win.props.title = f"lightcontrol {self.version}"
 
             # make actions for menu items
             self.create_action("about", self.on_about_action)
@@ -237,7 +237,7 @@ class Interface(object):
 
     def get_ui_data(self):
         """load the ui files and return them as a dict of big strings"""
-        ui_resource_folder_name = "ui4"
+        ui_resource_folder_name = "ui"
         ui_resource_filename_suffix = ".ui.xml"
         ui_resource_filename_prefixes = ["win", "help_overlay"]
         ui_strings = {}

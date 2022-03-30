@@ -1,6 +1,6 @@
 import unittest
-from livechart.lib import Datagetter
-from livechart.lib import Downsampler
+from lightcontrol.lib import Datagetter
+from lightcontrol.lib import Downsampler
 import statistics
 import math
 

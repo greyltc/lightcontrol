@@ -1,20 +1,20 @@
 import unittest
-from livechart.server import LiveServer
+from lightcontrol.server import LightServer
 
 
-class LiveServerTestCase(unittest.TestCase):
+class LightServerTestCase(unittest.TestCase):
     def test_init(self):
-        ls = LiveServer()
-        self.assertIsInstance(ls, LiveServer)
+        ls = LightServer()
+        self.assertIsInstance(ls, LightServer)
 
     def test_connect(self):
-        ls = LiveServer()
-        self.assertIsInstance(ls, LiveServer)
+        ls = LightServer()
+        self.assertIsInstance(ls, LightServer)
         ls.connect()
 
     def test_run(self):
         runtime = 5  # seconds
-        ls = LiveServer()
-        self.assertIsInstance(ls, LiveServer)
+        ls = LightServer()
+        self.assertIsInstance(ls, LightServer)
         ls.connect()
         ls.run(timeout=runtime)
